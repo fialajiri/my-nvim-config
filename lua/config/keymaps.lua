@@ -21,3 +21,6 @@ keymap.set("n", "sv", ":vsplit<Return>", opts)
 keymap.set("n", "te", ":tabedit", opts)
 keymap.set("n", "<tab>", ":tabnext<Return>", opts)
 keymap.set("n", "<s-tab>", ":tabprev<Return>", opts)
+
+keymap.set("i", "jk", "<ESC>", opts)
+vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
