@@ -13,6 +13,8 @@ local opts = { noremap = true, silent = true }
 --vim.keymap.set('n', '<c-h>', ':wincmd h<CR>')
 --vim.keymap.set('n', '<c-l>', ':wincmd l<CR>')
 
+vim.keymap.set("i", "<C-c>", "<Esc>")
+
 -- Split windows
 keymap.set("n", "ss", ":split<Return>", opts)
 keymap.set("n", "sv", ":vsplit<Return>", opts)
@@ -22,10 +24,9 @@ keymap.set("n", "te", ":tabedit", opts)
 keymap.set("n", "<tab>", ":tabnext<Return>", opts)
 keymap.set("n", "<s-tab>", ":tabprev<Return>", opts)
 
-keymap.set("i", "jk", "<ESC>", opts)
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
-vim.keymap.set("n", "<C-d>", "<C-d>zz")
-vim.keymap.set("n", "<C-u>", "<C-u>zz")
-vim.keymap.set("n", "<C-f>", "<C-f>zz")
-vim.keymap.set("n", "<C-b>", "<C-b>zz")
+vim.keymap.set("n", "<C-d>", "<C-d>")
+vim.keymap.set("n", "<C-u>", "<C-u>")
+vim.keymap.set("n", "<C-f>", "<C-f>")
+vim.keymap.set("n", "<C-b>", "<C-b>")
