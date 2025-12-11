@@ -9,7 +9,12 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "ts_ls", "pyright" },
+				ensure_installed = {
+					"lua_ls",
+					-- "ts_ls",
+					"pyright",
+					"jsonls",
+				},
 			})
 		end,
 	},
@@ -24,20 +29,26 @@ return {
 			vim.lsp.config.lua_ls = {
 				capabilities = capabilities,
 			}
-			vim.lsp.config.ts_ls = {
-				capabilities = capabilities,
-			}
+			-- vim.lsp.config.ts_ls = {
+			-- capabilities = capabilities,
+			-- }
 			vim.lsp.config.html = {
 				capabilities = capabilities,
 			}
 			vim.lsp.config.pyright = {
 				capabilities = capabilities,
 			}
+			vim.lsp.config.jsonls = {
+				capabilities = capabilities,
+			}
+
 			-- Enable the LSP servers
 			vim.lsp.enable("lua_ls")
-			vim.lsp.enable("ts_ls")
+			-- vim.lsp.enable("ts_ls")
 			vim.lsp.enable("html")
 			vim.lsp.enable("pyright")
+			vim.lsp.enable("jsonls")
+
 			local map = function(keys, func, desc, mode)
 				mode = mode or "n"
 				vim.keymap.set(mode, keys, func, { desc = "LSP: " .. desc })

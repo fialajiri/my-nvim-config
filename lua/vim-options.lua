@@ -22,6 +22,17 @@ vim.diagnostic.config({
   source = "if_many",  },  signs = true,  underline = true,  update_in_insert = false,  severity_sort = true,
 })
 
+vim.keymap.set("n", "gl", function()  vim.diagnostic.open_float({ border = "rounded", source = true })
+end, { desc = "Show full diagnostic" })
+
+vim.keymap.set("n", "gL", function()  local diagnostics = vim.diagnostic.get(0, { lnum = vim.api.nvim_win_get_cursor(0)[1] - 1 })  if #diagnostics == 0 then
+  print("No diagnostics on this line")
+  return  end
+  local messages = {}  for _, d in ipairs(diagnostics) do
+  table.insert(messages, d.message)  end
+  local text = table.concat(messages, "\n\n")  vim.fn.setreg("+", text)  print("Diagnostic copied to clipboard")
+end, { desc = "Copy diagnostic to clipboard" })
+
 -- Highlight when yanking (copying) text
 --  Try it with `yap` in normal mode
 --  See `:help vim.highlight.on_yank()`
