@@ -23,7 +23,6 @@ return {
       strict = true,
       -- set the light or dark variant manually, instead of relying on `background`
       -- (default to nil)
-      variant = "light|dark",
       -- same as `override` but specifically for overrides by filename
       -- takes effect when `strict` is true
       override_by_filename = {

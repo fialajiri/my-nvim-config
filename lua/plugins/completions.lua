@@ -50,7 +50,7 @@ return { -- Autocompletion
 				keyword_length = 1, -- start completion after 1 character
 			},
 			experimental = {
-				ghost_text = true, -- show ghost text preview
+				ghost_text = false, -- disabled to avoid conflict with Copilot
 			},
 			-- For an understanding of why these mappings were
 			-- chosen, you will need to read `:help ins-completion`
