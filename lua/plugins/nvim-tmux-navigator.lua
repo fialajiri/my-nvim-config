@@ -9,10 +9,10 @@ return {
 		"TmuxNavigatorProcessList",
 	},
 	keys = {
-		{ "<c-h>", "<cmd><C-U>TmuxNavigateLeft<cr>", mode = { "n", "t" } },
-		{ "<c-j>", "<cmd><C-U>TmuxNavigateDown<cr>", mode = { "n", "t" } },
-		{ "<c-k>", "<cmd><C-U>TmuxNavigateUp<cr>", mode = { "n", "t" } },
-		{ "<c-l>", "<cmd><C-U>TmuxNavigateRight<cr>", mode = { "n", "t" } },
-		{ "<c-\\>", "<cmd><C-U>TmuxNavigatePrevious<cr>", mode = { "n", "t" } },
+		{ "<c-h>", "<cmd>TmuxNavigateLeft<cr>", mode = { "n" } },
+		{ "<c-j>", "<cmd>TmuxNavigateDown<cr>", mode = { "n" } },
+		{ "<c-k>", "<cmd>TmuxNavigateUp<cr>", mode = { "n" } },
+		{ "<c-l>", "<cmd>TmuxNavigateRight<cr>", mode = { "n" } },
+		{ "<c-\\>", "<cmd>TmuxNavigatePrevious<cr>", mode = { "n" } },
 	},
 }

@@ -38,6 +38,24 @@ return {
 						mode = "t",
 						desc = "Navigate Right",
 					},
+					scroll_up = {
+						"<C-u>",
+						function()
+							local key = vim.api.nvim_replace_termcodes("<C-\\><C-n><C-u>", true, false, true)
+							vim.api.nvim_feedkeys(key, "n", false)
+						end,
+						mode = "t",
+						desc = "Scroll Up",
+					},
+					scroll_down = {
+						"<C-d>",
+						function()
+							local key = vim.api.nvim_replace_termcodes("<C-\\><C-n><C-d>", true, false, true)
+							vim.api.nvim_feedkeys(key, "n", false)
+						end,
+						mode = "t",
+						desc = "Scroll Down",
+					},
 				},
 			},
 		},
