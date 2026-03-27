@@ -27,16 +27,7 @@ return {
 				},
 				expose_as_code_action = "all",
 			},
-			on_attach = function(client, bufnr)
-				-- Auto-organize imports on save
-				vim.api.nvim_create_autocmd("BufWritePre", {
-					buffer = bufnr,
-					callback = function()
-						vim.cmd("TSToolsOrganizeImports")
-					end,
-				})
-			end,
-		})
+			})
 
 		-- TypeScript-specific keymaps
 		local map = function(keys, func, desc, mode)

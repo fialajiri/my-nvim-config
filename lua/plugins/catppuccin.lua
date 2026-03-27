@@ -12,7 +12,7 @@ return {
 				which_key = true,
 				flash = true,
 				cmp = true,
-				neotree = true,
+				trouble = true,
 				dap = true,
 				dap_ui = true,
 			},
