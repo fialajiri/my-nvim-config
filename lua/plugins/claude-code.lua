@@ -3,13 +3,14 @@ return {
 	dependencies = { "folke/snacks.nvim" },
 	opts = {
 		terminal = {
-			split_width_percentage = 0.4,
+			split_side = "left",
+			split_width_percentage = 0.3,
 			snacks_win_opts = {
 				keys = {
 					nav_h = {
 						"<C-h>",
 						function()
-							vim.cmd("wincmd h")
+							vim.cmd("TmuxNavigateLeft")
 						end,
 						mode = "t",
 						desc = "Navigate Left",
@@ -17,7 +18,7 @@ return {
 					nav_j = {
 						"<C-j>",
 						function()
-							vim.cmd("wincmd j")
+							vim.cmd("TmuxNavigateDown")
 						end,
 						mode = "t",
 						desc = "Navigate Down",
@@ -25,7 +26,7 @@ return {
 					nav_k = {
 						"<C-k>",
 						function()
-							vim.cmd("wincmd k")
+							vim.cmd("TmuxNavigateUp")
 						end,
 						mode = "t",
 						desc = "Navigate Up",
@@ -33,7 +34,7 @@ return {
 					nav_l = {
 						"<C-l>",
 						function()
-							vim.cmd("wincmd l")
+							vim.cmd("TmuxNavigateRight")
 						end,
 						mode = "t",
 						desc = "Navigate Right",
